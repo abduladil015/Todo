@@ -8,7 +8,7 @@ function LoginForm(props) {
     const [password, setPassword] = useState('');
 
     return (<>
-        <div className="logo">TODO APP</div>
+        <div className="logo">TO-DO APP</div>
         <Card bg='secondary'
             style={{
                 justifyContent: "space-evenly",

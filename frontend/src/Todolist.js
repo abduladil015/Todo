@@ -76,7 +76,7 @@ function Todolist(props) {
     }, []);
     return (
         <div className="App">
-            <div id="header">Todo App</div>
+            <div id="header">To-do App</div>
             <div className="userplace">
                 Welcome: {props.userName}
                 <Button variant="danger" onClick={props.logoutHandler} style={{ marginLeft: "20px" }}>Log Out</Button>
