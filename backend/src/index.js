@@ -11,7 +11,7 @@ app.use(express.json());//add body key to req
 app.set('trust proxy', 1);//trust first proxy
 app.use(cors({
   credentials: true,
-  origin: "https://bibhuti-todo.herokuapp.com"
+  origin: "https://adil-todo.herokuapp.com"
 }));
 app.use(session(
   {
@@ -22,7 +22,7 @@ app.use(session(
 
 
 //db connection
-const db = mongoose.createConnection('mongodb+srv://bibhuti:Bibhuti@123@todo.5rfof.mongodb.net/todoApp?retryWrites=true&w=majority',
+const db = mongoose.createConnection('mongodb+srv://adil-todo:12345@cluster0.lxyjb.mongodb.net/<dbname>?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true });
 //Schemas
 const userSchema = new mongoose.Schema({
