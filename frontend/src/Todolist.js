@@ -31,7 +31,7 @@ function Todolist(props) {
     };
     const editHandler = (editedTask, idx) => {
         const idToEdit = taskArray[idx]._id;
-        fetch(`https://bibhuti-todo-backend.herokuapp.com/todo/${idToEdit}`, {
+        fetch(`https://adil-todo-backend.herokuapp.com/todo/${idToEdit}`, {
             method: "PUT",
             body: JSON.stringify({ task: editedTask }),
             headers: {
@@ -48,7 +48,7 @@ function Todolist(props) {
     }
     const deleteHandler = (idx) => {
         const idToDelete = taskArray[idx]._id;
-        fetch(`https://bibhuti-todo-backend.herokuapp.com/todo/${idToDelete}`, {
+        fetch(`https://adil-todo-backend.herokuapp.com/todo/${idToDelete}`, {
             method: "DELETE",
             credentials: 'include'
         }).then((r) => {
@@ -59,7 +59,7 @@ function Todolist(props) {
 
     };
     useEffect(() => {
-        fetch('https://bibhuti-todo-backend.herokuapp.com/todo', { credentials: 'include' })
+        fetch('https://adil-todo-backend.herokuapp.com/todo', { credentials: 'include' })
             .then((r) => r.json())
             .then((arr) => {
                 console.log(arr);
