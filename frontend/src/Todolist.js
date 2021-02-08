@@ -13,7 +13,7 @@ function Todolist(props) {
     }
     const addTask = () => {
         //send data to backend
-        fetch('https://bibhuti-todo-backend.herokuapp.com/todo', {
+        fetch('https://adil-todo-backend.herokuapp.com/todo', {
             method: 'POST',
             body: JSON.stringify({ task: newTask }),
             headers: {

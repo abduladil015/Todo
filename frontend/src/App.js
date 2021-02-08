@@ -13,7 +13,7 @@ function App() {
     getUserName();
   }, []);
   const getUserName = () => {
-    return fetch('https://bibhuti-todo-backend.herokuapp.com/userinfo', { credentials: 'include' })
+    return fetch('https://adil-todo-backend.herokuapp.com/userinfo', { credentials: 'include' })
       .then((r) => {
         if (r.ok) {
           return r.json();
@@ -31,13 +31,13 @@ function App() {
       });
   }
   const signupHandler = (userName, password) => {
-    loginOrSignup('https://bibhuti-todo-backend.herokuapp.com/signup', userName, password);
+    loginOrSignup('https://adil-todo-backend.herokuapp.com/signup', userName, password);
   }
   const loginHandler = (userName, password) => {
-    loginOrSignup('https://bibhuti-todo-backend.herokuapp.com/login', userName, password);
+    loginOrSignup('https://adil-todo-backend.herokuapp.com/login', userName, password);
   }
   const logoutHandler = () => {
-    return fetch('https://bibhuti-todo-backend.herokuapp.com/logout', { credentials: 'include' })
+    return fetch('https://adil-todo-backend.herokuapp.com/logout', { credentials: 'include' })
       .then((r) => {
         console.log(r);
         if (r.ok) {
